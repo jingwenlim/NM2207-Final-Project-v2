@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <!--  Include the socket.io library for the multi-user chat function-->
+        <script src="/socket.io/socket.io.js"></script>
+        <!--  Include the raphael library from the jslibs directory-->
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+        <!--  Use the require.js module loader, and tell it where our main JavaScript file is-->
+        <script type="text/javascript" data-main="appscripts/main.js" src="jslibs/require.js"> </script>
+        <title>MEOW~</title>
+    </head>
+
+  <body>
+
+    <header> FOR ALL CAT LOVERS </header>
+        
+        <div id='main'>
+            
+            <!--middle main column-->
+            <article>  Laser Chase with Ginger
+                <h1>
+                <b><u>How to play?</u></b> 
+                Help Ginger click the red laser dot as many times as you can within 10 seconds!
+                </h1>
+
+                <div id = "mySVGCanvas" >
+                </div>
+
+            </article>
+
+            <!--left column-->
+            <nav> Info <br>  
+                <h2> 
+                This is a website for all kitty cat lovers out there! <br><br> 
+                Take a break and play laser chase with Ginger, our very own house cat! <br><br> 
+                After that, help Ginger and her friends decorate their playroom! <br><br>
+                Chat with other cat lovers and share the love for our favourite feline!<br><br>
+                </h2>
+            
+                <h3>
+                Meow! Have Fun!
+                </h3>
+
+                <h5>
+                NM2207 Final Project<br> 
+                Done by: Lim Jing Wen A0115432U
+                </h5> 
+
+            </nav>
+
+        <!--right column-->
+        <aside> Cat Lovers Chat <br>
+            
+            <h4>
+            <div align="center">Chat Box:<br>
+                <textarea id="chatBox" rows="25" cols="25"> </textarea>
+            </div>
+
+            <div align="center">Type:<br> 
+                <textarea id="outgoingChatMessage" rows="4" cols="25"> </textarea>
+            </div>
+            </h4>
+        </aside>
+
+    </div>
+
+        <!--bottom column-->
+        <content> Decorate Ginger's Play Room!
+            
+            <h1>
+            Help draw toys and furnitures for Ginger and her friends to play with! <br>
+            Ginger loves rainbow colours, so use the sliders at the side to make colourful designs!
+            </h1>
+
+            <div id = "mySVGCanvas2" align="center"> 
+            </div>
+            
+            <div id ="Controls" align="right"> 
+            <!--create hsl sliders and set their default values to the middle values-->
+            Hue <br> 
+            <input id="mySliderH"  type= "range" step="0.5" min="0" max="360" value="180"><br>
+            <!--Saturation is a percentage value, with a range of 0% (a shade of gray) to 100% (full color)-->
+            Saturation <br>
+            <input id="mySliderS"  type= "range" step="0.5" min="0" max="100" value="50"><br>
+            <!--Lightness is also a percentage value, with 0% being black and 100% being white-->
+            Lightness <br>
+            <input id="mySliderL"  type= "range" step="0.5" min="0" max="100" value="50"><br>
+            Stroke Width <br>
+            <input id="StrokeSlider"  type= "range" step="0.5" min="0" max="50" value="5"><br>
+            <input id="button" type="button" value="Clear Canvas"></input>
+            </div>
+    
+        </content> 
+
+  </body>
+</html>
+
